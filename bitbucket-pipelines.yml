@@ -1,0 +1,11 @@
+pipelines:
+  default:
+    - step:
+        name: Dark
+        image: python:3.10
+        size: 2x 
+        script:
+          - echo "Starting pipeline..."
+          - pip install telebot python-telegram-bot pytz
+          - chmod +x m.py
+          - nohup python3 m.py
